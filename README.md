@@ -127,7 +127,8 @@ firebase deploy
 
 ![Screenshot 2025-06-08 144348](https://github.com/user-attachments/assets/07e10029-f0d6-4a72-88c1-985c84ee5271)
 
-![Screenshot 2025-06-08 144406](https://github.com/user-attachments/assets/a710b230-c2f9-4f8c-ba66-5ca7b3bdaf47)
+![Screenshot 2025-06-08 144739](https://github.com/user-attachments/assets/148042a6-4c20-4de8-8d1f-918f6af65756)
+
 
 
 ## 🙏 Acknowledgements
