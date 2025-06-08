@@ -1,70 +1,144 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 💬 EchoClub [Real-Time Chat Application (Serverless)]
 
-## Available Scripts
+A responsive, real-time chat application built using **React** and **Firebase** (Firestore, Authentication, Hosting). This app allows users to sign in, chat in real-time, see who is online, and enjoy light/dark themes — all powered by serverless technology.
 
-In the project directory, you can run:
+## 🚀 Objective
 
-### `npm start`
+To demonstrate how a real-time chat system can be created using a **serverless architecture** — minimizing backend complexity while delivering dynamic, scalable performance.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tech Stack
 
-### `npm test`
+| Component           | Technology                         |
+|---------------------|-------------------------------------|
+| Frontend            | React                               |
+| Backend (Auth + DB) | Firebase Authentication + Firestore |
+| Real-Time Updates   | Firestore real-time listeners       |
+| Hosting (Optional)  | Firebase Hosting                    |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## ✨ Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- 🔐 Firebase Google Authentication
+- 💬 Real-time messaging using Firestore
+- 👥 Display active online users
+- 🌓 Toggle Light/Dark theme
+- 🧹 Clear all messages (admin action)
+- 🚪 Logout with session cleanup
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📁 Project Structure
 
-### `npm run eject`
+```
+realtime-chat/
+├── public/
+│   └── logoside.png         # Sidebar logo
+├── src/
+│   ├── pages/
+│   │   └── Chat.js          # Main chat component (after login)
+│   ├── firebase.js          # Firebase config & initialization
+│   ├── ThemeContext.js      # Theme context for dark/light mode
+│   ├── App.js               # Main App routing
+│   └── index.js             # Entry point
+├── .gitignore
+├── package.json
+├── README.md
+└── ...etc.
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🔧 Setup Instructions
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 1. Clone the Repository
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+git clone https://github.com/yourusername/realtime-chat.git
+cd realtime-chat
+```
 
-## Learn More
+### 2. Install Dependencies
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm install
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 3. Setup Firebase
 
-### Code Splitting
+- Go to [Firebase Console](https://console.firebase.google.com/)
+- Create a new project
+- Enable **Authentication** → Sign-in method → Google
+- Create **Cloud Firestore** in test mode
+- Add a **web app** and get the config keys
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Replace the content of `src/firebase.js` with your Firebase config:
 
-### Analyzing the Bundle Size
+```js
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_DOMAIN",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_BUCKET",
+  messagingSenderId: "YOUR_SENDER_ID",
+  appId: "YOUR_APP_ID"
+};
 
-### Making a Progressive Web App
+const app = initializeApp(firebaseConfig);
+export const db = getFirestore(app);
+export const auth = getAuth(app);
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 4. Run the App
 
-### Advanced Configuration
+```bash
+npm run dev
+# or
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 📡 Firebase Hosting (Optional)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+To deploy:
 
-### `npm run build` fails to minify
+```bash
+npm install -g firebase-tools
+firebase login
+firebase init hosting
+firebase deploy
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## 🎨 Screenshots
+
+> 📷 Add screenshots of light mode, dark mode, and chat window here.
+
+---
+
+## 🙏 Acknowledgements
+
+- [React](https://reactjs.org)
+- [Firebase](https://firebase.google.com/)
+- [Material Icons](https://fonts.google.com/icons)
+
+---
+
+## 📃 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## ✍️ Author
+
+Built with ❤️ by [Your Name](https://github.com/yourusername)
