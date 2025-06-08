@@ -121,9 +121,14 @@ firebase deploy
 
 ## 🎨 Screenshots
 
-> 📷 Add screenshots of light mode, dark mode, and chat window here.
 
----
+
+--- ![Screenshot 2025-06-08 144104](https://github.com/user-attachments/assets/e893fc2a-640f-4eee-8f77-9a881e36717a)
+
+![Screenshot 2025-06-08 144348](https://github.com/user-attachments/assets/07e10029-f0d6-4a72-88c1-985c84ee5271)
+
+![Screenshot 2025-06-08 144406](https://github.com/user-attachments/assets/a710b230-c2f9-4f8c-ba66-5ca7b3bdaf47)
+
 
 ## 🙏 Acknowledgements
 
@@ -135,10 +140,10 @@ firebase deploy
 
 ## 📃 License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is not licensed. Use and modify it if needed.
 
 ---
 
 ## ✍️ Author
 
-Built with ❤️ by [Your Name](https://github.com/yourusername)
+Built with ❤️ by [GANESH R](https://github.com/GaneshR2766)
