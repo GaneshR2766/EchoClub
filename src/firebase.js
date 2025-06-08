@@ -5,7 +5,7 @@ import { getFirestore } from "firebase/firestore";
 
 // 🔁 Replace these with your actual values from Firebase Console
 const firebaseConfig = {
-  apiKey: "AIzaSyDXvIvqefmeJ2wdpDtdDx5pDXsRg39LJR4",
+  apiKey: "**************************",
   authDomain: "realtimechatapp-bcd4f.firebaseapp.com",
   projectId: "realtimechatapp-bcd4f",
   storageBucket: "realtimechatapp-bcd4f.firebasestorage.app",
